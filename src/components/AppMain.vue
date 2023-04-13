@@ -24,6 +24,9 @@ main {
     background-color: black;
     color: white;
 }
-
-
+p {
+    margin: 0 auto;
+    padding: 50px 0;
+    width: $width;
+}
 </style>

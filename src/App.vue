@@ -1,11 +1,13 @@
 <script>
 import AppHeader from './components/AppHeader.vue';
 import AppMain from './components/AppMain.vue';
+import AppCta from './components/AppCta.vue';
 
 export default {
     components: { 
       AppHeader,
       AppMain,
+      AppCta,
     },
     data () {
       return {
@@ -18,6 +20,7 @@ export default {
 <template>
   <AppHeader />
   <AppMain/>
+  <AppCta/>
 </template>
 
 <style lang="scss">
