@@ -11,7 +11,9 @@ export default {
 
 <template>
     <main>
-        <p>Content goes here</p>
+        <p>
+            
+        </p>
     </main>
 </template>
 

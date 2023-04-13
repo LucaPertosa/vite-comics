@@ -31,7 +31,7 @@ export default {
                 },
             ]
         }
-    }
+    },
 }
 </script>
 
@@ -54,6 +54,7 @@ export default {
 main {
     background-color: $primary;
     color: white;
+    z-index: 999;
 }
 ul {
     margin: 0 auto;
