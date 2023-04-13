@@ -232,6 +232,8 @@ footer {
         height: 150px;
         .container {
             height: 100%;
+            margin: 0 auto;
+            width: $width;
             display: flex;
             justify-content: space-between;
             align-items: center;
@@ -265,9 +267,9 @@ footer {
             }
         }
     }
-img {
-    max-width: 100%;
-    max-height: 100%;
-}
+    img {
+        max-width: 100%;
+        max-height: 100%;
+    }
 }
 </style>
