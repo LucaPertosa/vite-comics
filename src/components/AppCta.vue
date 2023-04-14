@@ -54,7 +54,6 @@ export default {
 main {
     background-color: $primary;
     color: white;
-    z-index: 999;
 }
 ul {
     margin: 0 auto;
@@ -71,7 +70,9 @@ li {
     font-size: .8rem
 }
 img {
-    width: 30px;
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
 }
 p {
     margin-left: 5px;

@@ -137,6 +137,11 @@ export default {
             ]
         }
     },
+    methods: {
+    getLastIndex() {
+        return this.footerLinks[this.footerLinks.length - 1];
+    },
+}
 }
 </script>
 
@@ -144,11 +149,11 @@ export default {
     <footer>
         <div class="top">
             <div class="left">
-                <div v-for="(elem, index) in footerLinks" class="card">
+                <div v-for="(elem, index) in footerLinks" :key="index" class="card">
                     <h2> {{ index }} </h2>
                     <ul>
                         <li v-for="link in elem">
-                            <a :href="link.url">{{ link.name }}</a>
+                            <a :href="link.url">{{ link.name.charAt(0).toUpperCase() + link.name.slice(1) }}</a>
                         </li>
                     </ul>
                 </div>
@@ -179,15 +184,15 @@ export default {
 @use "../style/general.scss" as *;
 
 footer {
-    height: 500px;
     z-index: -1;
     background-image: url(../src/assets/img/footer-bg.jpg);
     background-size: cover;
     .top {
-        height: 100%;
+        padding: 30px 0;
         position: relative;
         margin: 0 auto;
         width: $width;
+
         .left {
             width: 500px;
             display: flex;
@@ -198,7 +203,7 @@ footer {
             h2 {
                 text-transform: uppercase;
                 color: white;
-                font-size: .6rem;
+                font-size: .7rem;
                 margin-top: 1rem;
             }
             ul {
@@ -207,21 +212,22 @@ footer {
                 a {
                     color: rgba(255, 255, 255, 0.288);
                     text-decoration: none;
-                    font-size: .6rem;
+                    font-size: .7rem;
                 }
             }
         }
         .right {
-            height: 100%;
+            height: 120%;
+            width: calc(100% - 500px);
             position: absolute;
-            top: 0;
-            left: 60%;
+            top: -10%;
+            right: 0;
+            z-index: 0;
             img {
                 height: 100%;
                 width: 100%;
-                transform: scale(1.2);
                 display: block;
-                z-index: 0;
+                object-fit: contain;
             }
         }
     }
